@@ -71,12 +71,14 @@ export default class HelloWorld {
 
                 // Trigger the grow/shrink animations on hover.
                 //@ts-ignore
-                buttonBehavior.onClick('pressed', () => {        const libraryActors: Array<MRE.ForwardPromise<MRE.Actor>> = [];
+                buttonBehavior.onClick('pressed', (userId: string) => {        const libraryActors: Array<MRE.ForwardPromise<MRE.Actor>> = [];
                     libraryActors.push(MRE.Actor.CreateFromLibrary(this.context, {
                         resourceId: "artifact: 1265485061176689661",
                         actor: {
                             name: 'Pandafog 02',
                             transform: {
+                                position: { x: 0, y: 0, z: 0 },
+                                scale: { x: 0.4, y: 0.4, z: 0.4 }
                             }
                         }
                     }));
